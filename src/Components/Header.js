@@ -25,7 +25,7 @@ const Header = () => {
       {arr.map((item)=>
       <Link
         onClick={()=>clickHandler(item.link)}
-        className={cn('someClass',{'active':item.link==location})}
+        className={cn('someClass',{'active':item.link===location})}
         to={item.link}
       >
         {item.title}
