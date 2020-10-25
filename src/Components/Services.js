@@ -1,6 +1,5 @@
 import React from 'react'
-import GoBack from "./GoBack";
-import NextPage from "./NextPage";
+import BackNext from "./BackNext";
 
 const Services = () => {
   return (
@@ -42,10 +41,7 @@ const Services = () => {
         </div>
 
       </div>
-      <div className="navigation-pages">
-        <GoBack color={'black'} link={'/'}/>
-        <NextPage color={'black'} link={'/projects'}/>
-      </div>
+      <BackNext color={'black'} next={'/projects'} back={'/'}/>
     </>
   )
 }

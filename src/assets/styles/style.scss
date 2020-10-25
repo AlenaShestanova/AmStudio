@@ -25,11 +25,12 @@ a {
 }
 
 .navigation-wrapper {
+
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 0;
-
+  padding-top:30px;
   a {
     font-style: normal;
     font-weight: normal;
@@ -198,6 +199,7 @@ a {
   line-height: 22px;
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 100px;
 
   .next-page {
     margin: 0;
@@ -279,6 +281,32 @@ a {
       margin-bottom: 30px;
     }
   }
+}
+
+.projects {
+  margin-top: 20px;
+  padding-top: 200px;
+  background-image: url('../../assets/img/projectsBg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-items {
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+
+    .item {
+      margin-right: 20px;
+    }
+  }
+
 }
 
 .footer {
