@@ -60,7 +60,7 @@ const Main = () => {
           </div>
           <div className='creative creative-left'> Creative</div>
         </div>
-        <NextPage link={'/services'}/>
+        <NextPage color={'white'} link={'/services'}/>
       </div>
 
     </div>
