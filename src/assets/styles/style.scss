@@ -38,6 +38,9 @@ a {
     line-height: 22px;
     color: #282828;
   }
+  .active{
+    border-bottom: 1px solid black;
+  }
 
   li:last-child {
     padding: 14px 58px;
