@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../assets/img/Logo.svg'
 
-const Navigation = () => {
+const Header = () => {
   return (
     <ul className='navigation-wrapper'>
       <Link to='/'> <img src={logo} alt=""/></Link>
@@ -16,4 +16,4 @@ const Navigation = () => {
     </ul>
   )
 }
-export default Navigation
+export default Header

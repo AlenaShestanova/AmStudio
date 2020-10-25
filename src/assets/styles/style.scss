@@ -10,6 +10,12 @@
 
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
 body {
   font-family: Manrope;
 }
@@ -103,10 +109,10 @@ a {
         transform: rotate(180deg);
         //transform-origin: left top 0;
         writing-mode: tb-rl;
+        margin-left: 20px;
+        margin-right: 20px;
 
       }
-
-
 
       .desc-container {
         display: flex;
@@ -144,53 +150,75 @@ a {
 
           }
         }
-         .desc-left {
+
+        .desc-left {
           margin: 0;
           text-align: left;
         }
       }
     }
   }
-  .left{
-    margin:100px 0 0 100px;
+
+  .left {
+    margin: 100px 0 0 100px;
+
     .creative-left {
       transform: none;
+      margin-right: 40px;
     }
-    .desc-left{
-      margin-right:40px
+
+    .desc-left {
+      margin-right: 40px
     }
   }
+
 }
-.footer{
-  padding-top:40px;
+.next-page {
+  color: #fff;
+  width: 100%;
+  position: relative;
+  left: 85%;
+  margin-top: 80px;
+  padding-bottom: 50px;
+
+  span {
+    margin-left: 30px;
+  }
+}
+.footer {
+  padding-top: 40px;
   margin-bottom: 30px;
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  &-btn{
+
+  &-btn {
     background: #2787F4;
     border-radius: 7px;
-    padding:18px 32px;
-    color:#fff;
+    padding: 18px 32px;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
     letter-spacing: 0.1em;
   }
-  &-amstudio{
+
+  &-amstudio {
     font-family: Lucida Console;
     font-style: normal;
     font-weight: normal;
     font-size: 120px;
-    letter-spacing:-0.06em;
+    letter-spacing: -0.06em;
     color: #000000;
     text-transform: uppercase;
-    span{
-      -webkit-text-stroke:2px black;
-      color:white;
+
+    span {
+      -webkit-text-stroke: 2px black;
+      color: white;
       text-shadow: 0 0 2px #000;
     }
   }
-  &-icons a{
+
+  &-icons a {
     margin-right: 36px;
   }
 }

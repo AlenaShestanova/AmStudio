@@ -1,5 +1,5 @@
 
-import Navigation from "./Components/Navigation";
+import Header from "./Components/Header";
 import Main from './Components/Main'
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Footer from "./Components/Footer";
@@ -8,7 +8,7 @@ function App() {
   return (
       <>
         <BrowserRouter>
-          <Navigation/>
+          <Header/>
           <Switch>
               <Route component={Main} path='/' exact></Route>
           </Switch>

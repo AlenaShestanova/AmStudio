@@ -1,5 +1,6 @@
 import React from 'react'
 import img from '../assets/img/img1.svg'
+import NextPage from "./NextPage";
 
 const Main = () => {
   return (
@@ -17,7 +18,9 @@ const Main = () => {
         <div className="main-content-container">
           <div className='creative'> Creative</div>
           <div className='desc-container'>
-           <div><div className='img'></div></div>
+            <div>
+              <div className='img'></div>
+            </div>
 
             <div className='desc'>
               <h2>Lorem ipsum dolor sit amet, consectetur .</h2>
@@ -41,11 +44,25 @@ const Main = () => {
                 tincidunt urna ac tincidunt sit ornare nec tristique. Purus et quis adipiscing
                 mattis</p>
             </div>
-            <div><div className='img img-left'></div></div>
+            <div>
+              <div className='img img-left'></div>
+            </div>
+
+            {/*<div>*/}
+            {/*  <div className='img img-left'></div>*/}
+            {/*  <div className="main-next-page">*/}
+            {/*    next page <br/>*/}
+            {/*    <span>*/}
+            {/*       <img src={next} alt=""/></span>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
+
           </div>
           <div className='creative creative-left'> Creative</div>
         </div>
+        <NextPage link={'/services'}/>
       </div>
+
     </div>
 
   )
