@@ -30,7 +30,9 @@ a {
   align-items: center;
   justify-content: space-around;
   padding: 0;
-  padding-top:30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   a {
     font-style: normal;
     font-weight: normal;
@@ -38,7 +40,8 @@ a {
     line-height: 22px;
     color: #282828;
   }
-  .active{
+
+  .active {
     border-bottom: 1px solid black;
   }
 
@@ -228,7 +231,6 @@ a {
 }
 
 .services {
-  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -287,7 +289,6 @@ a {
 }
 
 .projects {
-  margin-top: 20px;
   padding-top: 200px;
   background-image: url('../../assets/img/projectsBg.png');
   background-size: cover;
@@ -345,7 +346,59 @@ a {
     }
   }
 
-  &-icons a {
-    margin-right: 36px;
+}
+
+.social-icons {
+  margin-top: 20px;
+
+  a:nth-child(2) {
+    margin: 10px 31px;
+  }
+}
+
+.contacts {
+  background: #000;
+  width: 100%;
+  padding-top: 66px;
+
+  &-form {
+    width: 90%;
+    background: #EFEFEF;
+    height: 500px;
+    margin: 0 auto;
+
+    .white-header {
+      background: #fff;
+      width: 100%;
+      height: 68px;
+    }
+
+    .cont {
+      margin-top: 19px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 46px;
+        line-height: 112.7%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #0D0D0D;
+        margin-bottom: 31px;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 37px;
+        text-align: center;
+        color: #0D0D0D;
+        margin-bottom: 7px;
+      }
+    }
   }
 }

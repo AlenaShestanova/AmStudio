@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import vk from '../assets/img/vk.svg'
 import insta from '../assets/img/instagram.svg'
 import telega from '../assets/img/telegram.svg'
+import Social from "./Social";
 const Footer = () => {
   return (
     <div className='footer'>
@@ -12,11 +13,7 @@ const Footer = () => {
         <div className=""><span>am studio</span></div>
         <div className=""><span>am studio</span></div>
       </div>
-      <div className="footer-icons">
-        <Link to=''><img src={insta} alt=""/> </Link>
-        <Link to=''> <img src={telega} alt=""/></Link>
-        <Link to=''> <img src={vk} alt=""/></Link>
-      </div>
+     <Social/>
     </div>
   )
 }
