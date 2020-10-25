@@ -9,7 +9,16 @@
   src: url('../fonts/Lucida.ttf');
 
 }
+@font-face {
+  font-family: "Open Sans";
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
 
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../fonts/SourceSans/SourceSansPro-Regular.ttf');
+
+}
 * {
   margin: 0;
   padding: 0;
@@ -364,9 +373,10 @@ a {
   &-form {
     width: 90%;
     background: #EFEFEF;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
-
     .white-header {
       background: #fff;
       width: 100%;
@@ -399,6 +409,84 @@ a {
         color: #0D0D0D;
         margin-bottom: 7px;
       }
+
     }
+
+    .form {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60%;
+      background: #FFFFFF;
+      border-radius: 7px;
+      margin: 0 auto;
+      margin-bottom: 73px;
+      margin-top:58px;
+
+      label {
+        padding-top: 26px;
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        color: #323333;
+        margin-bottom: 11px;
+      }
+
+      input {
+        display: block;
+        border: none;
+        background: rgba(230, 230, 230, 0.34);
+        border-radius: 7px;
+        width: 80%;
+        height: 57px;
+        text-align: center;
+        color: #949494;
+        font-family: "Source Sans Pro";
+      }
+
+      textarea {
+        padding-top: 20px;
+        font-family: "Source Sans Pro";
+        width: 80%;
+        background: rgba(230, 230, 230, 0.34);
+        text-align: center;
+        border: none;
+        resize: none;
+        margin-bottom:30px;
+      }
+      .send-btn {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 29px;
+        padding: 19px 56px;
+        background: #2787F4;
+        border-radius: 7px;
+        margin-bottom: 37px;
+        &-title{
+          margin-right: 47px;
+        }
+      }
+      .rules{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.01em;
+        color: #323333;
+        margin-bottom: 33px;
+        font-family: "Open Sans";
+      }
+    }
+  }
+  .navigation-pages{
+    padding-top:50px;
+  padding-bottom: 60px;
   }
 }
