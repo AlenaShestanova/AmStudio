@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../assets/img/Logo.svg'
 import {useHistory} from 'react-router-dom'
@@ -19,6 +19,7 @@ const Header = () => {
     { title:'Контакты',link:'/contacts'},
 
   ]
+
   return (
     <ul className='navigation-wrapper'>
       <Link to='/'> <img src={logo} alt=""/></Link>
