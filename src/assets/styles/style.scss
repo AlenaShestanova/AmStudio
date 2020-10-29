@@ -9,16 +9,19 @@
   src: url('../fonts/Lucida.ttf');
 
 }
+
 @font-face {
   font-family: "Open Sans";
   src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
 
 }
+
 @font-face {
   font-family: "Source Sans Pro";
   src: url('../fonts/SourceSans/SourceSansPro-Regular.ttf');
 
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -68,9 +71,15 @@ a {
   &-desc {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 50px;
     margin-bottom: 150px;
+
+    .item {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 
     .right {
       font-style: normal;
@@ -78,6 +87,10 @@ a {
       font-size: 26px;
       line-height: 36px;
       color: #000000;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       h1 {
         margin-top: 70px;
@@ -95,13 +108,9 @@ a {
 
       p {
         margin: 0;
-        width: 90%;
       }
     }
 
-    .item {
-      width: 40%;
-    }
   }
 
   &-content {
@@ -378,6 +387,7 @@ a {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+
     .white-header {
       background: #fff;
       width: 100%;
@@ -423,7 +433,7 @@ a {
       border-radius: 7px;
       margin: 0 auto;
       margin-bottom: 73px;
-      margin-top:58px;
+      margin-top: 58px;
 
       label {
         padding-top: 26px;
@@ -456,8 +466,9 @@ a {
         text-align: center;
         border: none;
         resize: none;
-        margin-bottom:30px;
+        margin-bottom: 30px;
       }
+
       .send-btn {
         display: flex;
         align-items: center;
@@ -470,11 +481,13 @@ a {
         background: #2787F4;
         border-radius: 7px;
         margin-bottom: 37px;
-        &-title{
+
+        &-title {
           margin-right: 47px;
         }
       }
-      .rules{
+
+      .rules {
         font-style: normal;
         font-weight: 300;
         font-size: 18px;
@@ -486,8 +499,9 @@ a {
       }
     }
   }
-  .navigation-pages{
-    padding-top:50px;
-  padding-bottom: 60px;
+
+  .navigation-pages {
+    padding-top: 50px;
+    padding-bottom: 60px;
   }
 }
