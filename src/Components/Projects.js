@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import ProjectsItem from "./ProjectsItem";
 import BackNext from "./BackNext";
 
 const Projects = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  },[])
   return (
     <>
       <div className='projects'>

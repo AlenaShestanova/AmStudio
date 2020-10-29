@@ -1,10 +1,11 @@
 import Header from "./Components/Header";
 import Main from './Components/Main'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route, Switch,useHistory} from 'react-router-dom'
 import Footer from "./Components/Footer";
 import Services from "./Components/Services";
 import Projects from "./Components/Projects";
 import Contacts from "./Components/Contacts";
+import React from 'react'
 
 function App() {
   return (
@@ -20,8 +21,6 @@ function App() {
         <Footer/>
       </BrowserRouter>
     </>
-
   );
 }
-
 export default App;

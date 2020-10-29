@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Social from "./Social";
 import send from '../assets/img/send.svg'
 import GoBack from "./GoBack";
 
 const Contacts = () => {
+ useEffect(()=>{
+   window.scrollTo(0, 0)
+ },[])
   return (
     <div className='contacts'>
       <div className="contacts-form">

@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import img from '../assets/img/img1.svg'
 import NextPage from "./NextPage";
 
 const Main = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  },[])
   return (
     <div className='main'>
       <div className='main-desc'>
