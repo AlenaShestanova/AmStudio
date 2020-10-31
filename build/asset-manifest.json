@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.b583bddf.chunk.css",
-    "main.js": "/static/js/main.31e68f80.chunk.js",
-    "main.js.map": "/static/js/main.31e68f80.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.eef082c2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.eef082c2.js.map",
-    "static/js/2.150657ec.chunk.js": "/static/js/2.150657ec.chunk.js",
-    "static/js/2.150657ec.chunk.js.map": "/static/js/2.150657ec.chunk.js.map",
-    "static/js/3.82a02f5c.chunk.js": "/static/js/3.82a02f5c.chunk.js",
-    "static/js/3.82a02f5c.chunk.js.map": "/static/js/3.82a02f5c.chunk.js.map",
+    "main.css": "/static/css/main.05435a00.chunk.css",
+    "main.js": "/static/js/main.08cd5b8d.chunk.js",
+    "main.js.map": "/static/js/main.08cd5b8d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5384a191.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5384a191.js.map",
+    "static/js/2.a5775517.chunk.js": "/static/js/2.a5775517.chunk.js",
+    "static/js/2.a5775517.chunk.js.map": "/static/js/2.a5775517.chunk.js.map",
+    "static/js/3.e053ec26.chunk.js": "/static/js/3.e053ec26.chunk.js",
+    "static/js/3.e053ec26.chunk.js.map": "/static/js/3.e053ec26.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.b583bddf.chunk.css.map": "/static/css/main.b583bddf.chunk.css.map",
-    "static/js/2.150657ec.chunk.js.LICENSE.txt": "/static/js/2.150657ec.chunk.js.LICENSE.txt",
+    "static/css/main.05435a00.chunk.css.map": "/static/css/main.05435a00.chunk.css.map",
+    "static/js/2.a5775517.chunk.js.LICENSE.txt": "/static/js/2.a5775517.chunk.js.LICENSE.txt",
     "static/media/Logo.5631adad.svg": "/static/media/Logo.5631adad.svg",
     "static/media/style.scss": "/static/media/projectsBg.353a09b3.png",
-    "static/media/img1.624c9935.svg": "/static/media/img1.624c9935.svg",
+    "static/media/burger.ed696e8b.svg": "/static/media/burger.ed696e8b.svg",
     "static/media/instagram.aca2de44.svg": "/static/media/instagram.aca2de44.svg",
     "static/media/next.975a1f5e.svg": "/static/media/next.975a1f5e.svg",
     "static/media/send.d984659f.svg": "/static/media/send.d984659f.svg",
@@ -23,9 +23,9 @@
     "static/media/vk.f214ba45.svg": "/static/media/vk.f214ba45.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eef082c2.js",
-    "static/js/2.150657ec.chunk.js",
-    "static/css/main.b583bddf.chunk.css",
-    "static/js/main.31e68f80.chunk.js"
+    "static/js/runtime-main.5384a191.js",
+    "static/js/2.a5775517.chunk.js",
+    "static/css/main.05435a00.chunk.css",
+    "static/js/main.08cd5b8d.chunk.js"
   ]
 }
