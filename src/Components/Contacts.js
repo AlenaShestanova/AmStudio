@@ -2,10 +2,10 @@ import React, {useEffect} from 'react'
 import Social from "./Social";
 import send from '../assets/img/send.svg'
 import GoBack from "./GoBack";
+import axios from "axios";
 
 const Contacts = () => {
   const [input, setInput] = React.useState({})
-  const axios = require('axios').default;
 
   const baseURL = "http://amstudio.tech/contacts/feedback/";
 
@@ -13,17 +13,21 @@ const Contacts = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  async function postRequest(url, data) {
-    return await axios({
-      type: 'POST',
-      url,
-      data: JSON.stringify(data),
-      contentType: 'application/json;charset=utf-8',
-      dataType: 'json'
-
-    })
+  async function postRequest(event) {
+    event.preventDefault()
+    try{
+      const response= await axios.post("http://amstudio.tech/contacts/feedback/",{input})
+      console.log(response)
+    }
+    catch (error){
+      console.log(error)
+    }
   }
 
+  // const postRequest = (event) => {
+  //   event.preventDefault()
+  //   axios.post('')
+  // }
   return (
     <div className='contacts'>
       <div className="contacts-form">
@@ -44,7 +48,7 @@ const Contacts = () => {
           <label htmlFor="question">Ваш вопрос</label>
           <textarea onChange={({target}) => setInput(prevState => ({...prevState, text: target.value}))}
                     placeholder='Здравствуйте, я хотел бы узнать...' name="" id="question" rows={12}/>
-          <div  onClick={postRequest(baseURL,input)} className="send-btn">
+          <div onClick={(event) => postRequest(event)} className="send-btn">
             <div className='send-btn-title'>Отправить</div>
             <img src={send} alt=""/>
           </div>
