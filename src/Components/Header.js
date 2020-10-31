@@ -39,7 +39,6 @@ const Header = () => {
       )}
       <li className='order'> Заказать</li>
       <img className='burger-menu' src={burger} onClick={getMobileMenu()} alt=""/>
-
     </ul>
   )
 }
