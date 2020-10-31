@@ -14,7 +14,7 @@ const Projects = () => {
           <ProjectsItem title={'Aliquam scelerisque'}/>
           <ProjectsItem title={'Aliquam scelerisque'}/>
         </div>
-        <div className="projects-items">
+        <div className="projects-items two">
           <ProjectsItem title={'Aliquam scelerisque'}/>
           <ProjectsItem title={'Aliquam scelerisque'}/>
           <ProjectsItem title={'Aliquam scelerisque'}/>

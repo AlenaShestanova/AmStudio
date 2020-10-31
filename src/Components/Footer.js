@@ -4,6 +4,7 @@ import vk from '../assets/img/vk.svg'
 import insta from '../assets/img/instagram.svg'
 import telega from '../assets/img/telegram.svg'
 import Social from "./Social";
+
 const Footer = () => {
   return (
     <div className='footer'>
@@ -13,7 +14,8 @@ const Footer = () => {
         <div className=""><span>am studio</span></div>
         <div className=""><span>am studio</span></div>
       </div>
-     <Social/>
+        <Social/>
+
     </div>
   )
 }

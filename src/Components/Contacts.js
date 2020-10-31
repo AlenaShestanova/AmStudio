@@ -1,12 +1,29 @@
-import React,{useEffect} from 'react'
+import React, {useEffect} from 'react'
 import Social from "./Social";
 import send from '../assets/img/send.svg'
 import GoBack from "./GoBack";
 
 const Contacts = () => {
- useEffect(()=>{
-   window.scrollTo(0, 0)
- },[])
+  const [input, setInput] = React.useState({})
+  const axios = require('axios').default;
+
+  const baseURL = "http://amstudio.tech/contacts/feedback/";
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  async function postRequest(url, data) {
+    return await axios({
+      type: 'POST',
+      url,
+      data: JSON.stringify(data),
+      contentType: 'application/json;charset=utf-8',
+      dataType: 'json'
+
+    })
+  }
+
   return (
     <div className='contacts'>
       <div className="contacts-form">
@@ -19,12 +36,15 @@ const Contacts = () => {
         </div>
         <div className="form">
           <label htmlFor="name">Имя</label>
-          <input placeholder='Ольга' id='name' type="text"/>
+          <input onChange={({target}) => setInput(prevState => ({...prevState, name: target.value}))}
+                 placeholder='Ольга' id='name' type="text"/>
           <label htmlFor="email">E-mail</label>
-          <input placeholder='example@mail.ru' id='email' type="text"/>
+          <input onChange={({target}) => setInput(prevState => ({...prevState, email: target.value}))}
+                 placeholder='example@mail.ru' id='email' type="text"/>
           <label htmlFor="question">Ваш вопрос</label>
-          <textarea placeholder='Здравствуйте, я хотел бы узнать...' name="" id="question" rows={12}/>
-          <div className="send-btn">
+          <textarea onChange={({target}) => setInput(prevState => ({...prevState, text: target.value}))}
+                    placeholder='Здравствуйте, я хотел бы узнать...' name="" id="question" rows={12}/>
+          <div  onClick={postRequest(baseURL,input)} className="send-btn">
             <div className='send-btn-title'>Отправить</div>
             <img src={send} alt=""/>
           </div>

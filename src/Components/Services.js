@@ -9,7 +9,7 @@ const Services = () => {
     <>
       <div className='services'>
         <div className='services-title'>
-          <h1>Как мы продвигаем <span>наших клиентов?</span></h1>
+          <h1>Как мы продвигаем  <br/><span>наших клиентов?</span></h1>
         </div>
         <div className="services-item">
           <div className="items-title">

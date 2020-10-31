@@ -9,7 +9,8 @@ const Main = () => {
   return (
     <div className='main'>
       <div className='main-desc'>
-        <div className='item'><img src={img} alt=""/></div>
+        <div className='item left'>
+        </div>
         <div className='right item'>
           <h1> am <br/>studio </h1>
           <p>Задача организации, в особенности же рамки и место обучения кадров представляет собой интересный
@@ -37,8 +38,6 @@ const Main = () => {
         </div>
         <div className="main-content-container left">
           <div className='desc-container desc-container-left'>
-
-
             <div className='desc desc-left'>
               <h2>Lorem ipsum dolor sit amet, consectetur .</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra malesuada tincidunt
@@ -50,16 +49,6 @@ const Main = () => {
             <div>
               <div className='img img-left'></div>
             </div>
-
-            {/*<div>*/}
-            {/*  <div className='img img-left'></div>*/}
-            {/*  <div className="main-next-page">*/}
-            {/*    next page <br/>*/}
-            {/*    <span>*/}
-            {/*       <img src={next} alt=""/></span>*/}
-            {/*  </div>*/}
-            {/*</div>*/}
-
           </div>
           <div className='creative creative-left'> Creative</div>
         </div>
