@@ -10,7 +10,7 @@ const Contacts = () => {
   const [input, setInput] = React.useState({})
   const [errors, setErrors] = React.useState(new Map([]))
   const [openModal, setOpenModal] = React.useState(false)
-  const [response, setResponse] = React.useState('')
+  const [response, setResponse] = React.useState()
   const closeModal = () => {
     setOpenModal(false)
   }
@@ -106,7 +106,7 @@ const Contacts = () => {
               <div onClick={closeModal} style={{cursor: 'pointer', color: '#9CA1A6'}}>&#10006;</div>
             </div>
             <div className="modal_content">
-              {response === 'ok' ? 'Ваше сообщение доставлено' : 'Извините, проблемы с сервером:('}
+              {response === 200 ? 'Ваше сообщение доставлено' : 'Извините, проблемы с сервером:('}
             </div>
             <div className="modal_footer">
               <button onClick={closeModal} className='modal_footer_btn  doneBtn'>ok</button>
