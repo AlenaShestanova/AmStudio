@@ -6,28 +6,45 @@ import axios from "axios";
 
 const Contacts = () => {
   const [input, setInput] = React.useState({})
-
-  const baseURL = "http://amstudio.tech/contacts/feedback/";
+  const [errors, setErrors] = React.useState(new Map([]))
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
 
+  }, [])
+  console.log(errors)
   async function postRequest(event) {
-    event.preventDefault()
-    try{
-      const response= await axios.post("http://amstudio.tech/contacts/feedback/",{input})
-      console.log(response)
+    inputHandler()
+    if (Object.keys(input).length === 3) {
+      event.preventDefault()
+      try {
+        const response = await axios.post("http://amstudio.tech/contacts/feedback/", {input})
+      } catch (error) {
+      }
     }
-    catch (error){
-      console.log(error)
+  }
+  const inputHandler = () => {
+    const map = new Map([])
+    if (Object.keys(input).length !== 0) {
+      if (!input.name) map.set('name', 'Введите имя')
+      if (!input.email) map.set('email', 'Введите майл')
+      if (!input.text) map.set('text', 'Введите ваш вопрос')
+    } else {
+      map.set('empty', 'Заполните пустые поля')
+    }
+    setErrors(new Map(map))
+
+  }
+  const inputOnChange = (key, value) => {
+    if (value) {
+      setInput(prevState => ({...prevState, [key]: value}))
+
+    } else {
+      delete input[key]
+      setInput(prevState => ({...prevState}))
     }
   }
 
-  // const postRequest = (event) => {
-  //   event.preventDefault()
-  //   axios.post('')
-  // }
   return (
     <div className='contacts'>
       <div className="contacts-form">
@@ -40,19 +57,24 @@ const Contacts = () => {
         </div>
         <div className="form">
           <label htmlFor="name">Имя</label>
-          <input onChange={({target}) => setInput(prevState => ({...prevState, name: target.value}))}
-                 placeholder='Ольга' id='name' type="text"/>
+          <input className={`${errors.get('name') || errors.get('empty') ? 'errorsInput':''}`} onChange={({target}) => (inputOnChange('name', target.value))}
+                 placeholder='Ольга' id='name' type="text" maxLength='75'/>
+          <div className='errors'> {errors.get('name')}</div>
           <label htmlFor="email">E-mail</label>
-          <input onChange={({target}) => setInput(prevState => ({...prevState, email: target.value}))}
-                 placeholder='example@mail.ru' id='email' type="text"/>
+          <input className={`${errors.get('email') || errors.get('empty') ? 'errorsInput':''}`} onChange={({target}) => (inputOnChange('email', target.value))}
+                 placeholder='example@mail.ru' id='email' type="text" maxLength='75'/>
+          <div className='errors'>  {errors.get('email')}</div>
+
           <label htmlFor="question">Ваш вопрос</label>
-          <textarea onChange={({target}) => setInput(prevState => ({...prevState, text: target.value}))}
-                    placeholder='Здравствуйте, я хотел бы узнать...' name="" id="question" rows={12}/>
+          <textarea className={`${errors.get('text') || errors.get('empty') ? 'errorsInput':''}`} onChange={({target}) => (inputOnChange('text', target.value))}
+                    placeholder='Здравствуйте, я хотел бы узнать...' name="" id="question" rows={12}
+                    maxLength='3000'/>
+          <div className='errors'> {errors.get('text')}{errors.get('empty')}</div>
+
           <div onClick={(event) => postRequest(event)} className="send-btn">
             <div className='send-btn-title'>Отправить</div>
             <img src={send} alt=""/>
           </div>
-
           <div className="rules">
             Мы не передаем данные третьим лицам
           </div>

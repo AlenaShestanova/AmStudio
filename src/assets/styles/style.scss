@@ -261,6 +261,7 @@ a {
 
   .go-back {
     position: relative;
+
     span {
       position: absolute;
       right: 10px;
@@ -474,9 +475,25 @@ a {
         border-radius: 7px;
         width: 80%;
         height: 57px;
+        font-size: 20px;
         text-align: center;
-        color: #949494;
+        color: black;
         font-family: "Source Sans Pro";
+      }
+
+      ::-webkit-input-placeholder {
+        color: #949494;
+        font-size: 16px;
+
+      }
+
+      .errors {
+        color: red;
+
+      }
+
+      .errorsInput {
+        border: 1px solid red
       }
 
       textarea {
@@ -487,7 +504,7 @@ a {
         text-align: center;
         border: none;
         resize: none;
-        margin-bottom: 30px;
+        font-size: 20px;
       }
 
       .send-btn {
@@ -503,6 +520,7 @@ a {
         border-radius: 7px;
         margin-bottom: 37px;
         cursor: pointer;
+        margin-top: 30px;
 
         &-title {
           margin-right: 47px;
