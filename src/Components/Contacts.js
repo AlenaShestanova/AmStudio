@@ -27,13 +27,14 @@ const Contacts = () => {
         const response = await axios.post("/contacts/feedback/", {input})
         setResponse(response.status)
         setOpenModal(true)
+        console.log(response)
       } catch (error) {
 
       }
     }
   }
 
-  console.log(response.status)
+
   const inputHandler = () => {
     const map = new Map([])
     if (Object.keys(input).length !== 0) {
