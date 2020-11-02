@@ -24,7 +24,7 @@ const Contacts = () => {
     if (Object.keys(input).length === 3) {
       event.preventDefault()
       try {
-        const response = await axios.post("http://amstudio.tech/contacts/feedback/", {input})
+        const response = await axios.post("contacts/feedback/", {input})
         setResponse(response.status)
         setOpenModal(true)
       } catch (error) {
