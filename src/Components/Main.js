@@ -10,12 +10,13 @@ const Main = () => {
     <div className='main'>
       <div className='main-desc'>
         <div className='item left'>
+          <img src={img} alt=""/>
         </div>
         <div className='right item'>
           <h1> am <br/>studio </h1>
-          <p>Задача организации, в особенности же рамки и место обучения кадров представляет собой интересный
-            эксперимент проверки новых предложений, занимаемых участниками в отношении поставленных
-            задач.</p>
+          <p>Разработка, внедрение и обслуживание программного обеспечения и веб-сайтов для малого и среднего бизнеса.
+            Разработка IT-решений у нас — это выгодная инвестиция в ваш бизнес
+          </p>
         </div>
       </div>
       <div className='main-content'>
@@ -27,24 +28,22 @@ const Main = () => {
             </div>
 
             <div className='desc'>
-              <h2>Lorem ipsum dolor sit amet, consectetur .</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra malesuada tincidunt
-                urna ac tincidunt sit ornare nec tristique. Purus et quis adipiscing mattis imperdiet
-                elitLorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra malesuada
-                tincidunt urna ac tincidunt sit ornare nec tristique. Purus et quis adipiscing
-                mattis</p>
+              <h2>AM STUDIO</h2>
+              <p>	Наша команда оказывает полный спектр услуг по реализации и сопровождению IT-проектов, полагаясь на ваши интересы и цели в бизнесе.
+                Основная специализация студии — разработка лендингов, веб-приложений и сайтов любой сложности.
+                Также наши frontend- и backend-разработчики реализуют любую вашу задумку. Просто напишите нам</p>
             </div>
           </div>
         </div>
         <div className="main-content-container left">
           <div className='desc-container desc-container-left'>
             <div className='desc desc-left'>
-              <h2>Lorem ipsum dolor sit amet, consectetur .</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra malesuada tincidunt
-                urna ac tincidunt sit ornare nec tristique. Purus et quis adipiscing mattis imperdiet
-                elitLorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra malesuada
-                tincidunt urna ac tincidunt sit ornare nec tristique. Purus et quis adipiscing
-                mattis</p>
+              <h2>Почему мы?</h2>
+              <p>-	Благодаря практическому опыту мы реализуем ваш проект качественно и точно в срок <br/>
+                -	Учтем каждое ваше требование и отработаем на все 110% <br/>
+                - Обеспечим проект технической поддержкой — обучим ваших сотрудников работе с продуктом <br/>
+                - Для реализации проекта мы используем самый популярный стек технологий
+              </p>
             </div>
             <div>
               <div className='img img-left'></div>

@@ -1,9 +1,11 @@
 import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import {Link, NavLink, useHistory} from 'react-router-dom'
 import logo from '../assets/img/Logo.svg'
 import burger from '../assets/img/burger.svg'
 
 const Header = () => {
+  let history = useHistory()
+  const[ openMenu,setOpenMenu]=React.useState(false)
   const arr = [
     {title: 'Главная', link: '/'},
     {title: 'Услуги и цены', link: '/services'},
@@ -12,8 +14,8 @@ const Header = () => {
     {title: 'Контакты', link: '/contacts'},
 
   ]
-  const getMobileMenu=()=>{
-    return  <div className="mobile-menu">
+  const mobileMenu=(
+    <div className={ `mobile-menu ${openMenu&& 'mobile-menu-active'}`}>
       {arr.map((item) =>
         <NavLink
           exact
@@ -24,22 +26,26 @@ const Header = () => {
         </NavLink>
       )}
     </div>
-  }
-  return (
-    <ul className='navigation-wrapper'>
-      <Link to='/'> <img src={logo} alt=""/></Link>
-      {arr.map((item) =>
-        <NavLink
-          exact
-          activeClassName="active"
-          to={item.link}
-        >
-          {item.title}
-        </NavLink>
-      )}
-      <li className='order'> Заказать</li>
-      <img className='burger-menu' src={burger} onClick={getMobileMenu()} alt=""/>
-    </ul>
   )
+
+const redirect = () => (history.push('/contacts'))
+
+return (
+  <ul className='navigation-wrapper'>
+    <Link to='/'> <img src={logo} alt=""/></Link>
+    {arr.map((item) =>
+      <NavLink
+        exact
+        activeClassName="active"
+        to={item.link}
+      >
+        {item.title}
+      </NavLink>
+    )}
+    <li onClick={redirect} className='order'> Заказать</li>
+    <img className='burger-menu' src={burger} onClick={()=>setOpenMenu(!openMenu)} alt=""/>
+    {openMenu && mobileMenu}
+  </ul>
+)
 }
 export default Header
