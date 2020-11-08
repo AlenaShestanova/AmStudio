@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react'
 import img from '../assets/img/img1.svg'
+import techIcon from '../assets/img/techIcon.svg'
 import NextPage from "./NextPage";
-
+import creativeImg from '../assets/img/creativeImg.svg'
 const Main = () => {
   useEffect(()=>{
     window.scrollTo(0, 0)
@@ -24,10 +25,10 @@ const Main = () => {
           <div className='creative'> Creative</div>
           <div className='desc-container'>
             <div>
-              <div className='img'></div>
+              <img src={creativeImg} alt=""/>
             </div>
 
-            <div className='desc'>
+            <div className='desc-right'>
               <h2>AM STUDIO</h2>
               <p>	Наша команда оказывает полный спектр услуг по реализации и сопровождению IT-проектов, полагаясь на ваши интересы и цели в бизнесе.
                 Основная специализация студии — разработка лендингов, веб-приложений и сайтов любой сложности.
@@ -46,10 +47,22 @@ const Main = () => {
               </p>
             </div>
             <div>
-              <div className='img img-left'></div>
+              <img src={creativeImg} alt=""/>
             </div>
           </div>
           <div className='creative creative-left'> Creative</div>
+        </div>
+        <div className="main-content-container">
+          <div className='creative'> Creative</div>
+          <div className='desc-container'>
+            <div>
+              <img className='techIcon' src={techIcon} alt=""/>
+            </div>
+            <div className='desc-right'>
+              <h2>Технологии</h2>
+              <p>	Мы используем наиболее востребованный стек технологий для реализации ваших идей ( python, js, react, css, html, sqlite3, nginx, mysql, django, flask)</p>
+            </div>
+          </div>
         </div>
         <NextPage color={'white'} link={'/services'}/>
       </div>

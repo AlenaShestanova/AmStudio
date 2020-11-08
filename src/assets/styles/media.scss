@@ -61,41 +61,10 @@
   }
 }
 
+//GENERAL
 @media screen and (max-width: 900px) {
 
 
-  //.main-desc {
-  //  display: flex;
-  //  justify-content: space-around;
-  //
-  //  .left {
-  //    order: 2;
-  //    width: 50%;
-  //
-  //  }
-  //
-  //  .right {
-  //    order: 1;
-  //
-  //    h1 {
-  //      font-size: 90px;
-  //    }
-  //
-  //  }
-  //
-  //  img {
-  //    //width: 50%;
-  //    //height: 50%;
-  //  }
-  //
-  //}
-  .main-content {
-    background-image: url('../../assets/img/mainBg.svg');
-
-    .img {
-      display: none;
-    }
-  }
   .projects {
     &-items {
       flex-direction: column;
@@ -224,6 +193,21 @@
       }
     }
   }
+  .main-content {
+
+    p {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 40px
+    }
+
+    img {
+      width: 450px;
+    }
+
+  }
 }
 
 @media screen and (max-width: 1130px) {
@@ -265,11 +249,32 @@
         font-size: 18px;
         line-height: 25px;
       }
+
+    }
+  }
+  .main-content {
+
+    img {
+      width: 400px;
+    }
+
+    .creative {
+      font-size: 70px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .desc-container {
+      img {
+        width: 100%;
+      }
     }
   }
 }
-@media screen and (max-width: 900px) {
 
+@media screen and (max-width: 900px) {
 
   .main-desc {
     display: flex;
@@ -282,7 +287,7 @@
     }
 
     .right {
-    margin-left: 40px;
+      margin-left: 40px;
       order: 1;
 
       h1 {
@@ -291,19 +296,161 @@
 
     }
 
+  }
+  .main-content {
+    background-image: url('../../assets/img/mobileMainBg.svg');
+
     img {
-      //width: 50%;
-      //height: 50%;
+      display: none;
+    }
+
+    .techIcon {
+      display: block;
+    }
+
+    .desc-container {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  //.main-desc {
+  //  .left {
+  //    width: 50%;
+  //
+  //    img {
+  //      width: 380px;
+  //      height: 284px;
+  //    }
+  //  }
+  //
+  //  .right {
+  //    width: 100%;
+  //
+  //    h1 {
+  //      font-size: 70px;
+  //    }
+  //
+  //    p {
+  //      font-size: 18px;
+  //      line-height: 25px;
+  //    }
+  //  }
+  //}
+  .main-desc {
+    background-image: url('../../assets/img/mainImgBg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #fff;
+
+    img {
+      display: none;
+    }
+
+    .left {
+      display: none;
+    }
+
+    .right {
+      color: #fff;
+
+      h1 {
+        color: #fff;
+
+        br {
+          display: none;
+        }
+      }
+
+      p {
+        color: #fff;
+        padding-bottom: 50px;
+      }
+    }
+  }
+  .main-content {
+
+    .creative {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .desc-container {
+      .desc-right {
+        margin-right: 20px;
+        margin-left: 0px;
+
+      }
+
+      .desc-left {
+        margin-left: 20px;
+        margin-right: 0px;
+
+      }
+
+      img {
+        width: 100%;
+
+      }
     }
 
   }
 }
-@media screen and (max-width: 400px){
+
+@media screen and (max-width: 500px) {
+  .main-desc {
+
+
+    .right {
+      color: #fff;
+
+      h1 {
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  .main-content {
+    .creative {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    .desc-container {
+      img {
+        width: 100%;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
   .main-desc {
     .left {
       img {
-        width: 330px;
-        height: 280px;
+        width: 130px;
+
       }
     }
 
@@ -314,11 +461,37 @@
 
       p {
         font-size: 14px;
-        line-height: 25px;
+        line-height: 19px;
       }
+    }
+
+    img {
+      width: 10%;
+    }
+  }
+  .main-content {
+    .creative {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    .desc-container {
+      img {
+        width: 100%;
+      }
+
     }
   }
 }
+
 //ABOUT
 @media screen and (max-width: 900px) {
   .about-wrapper {
@@ -411,3 +584,5 @@
     width: 17px;
   }
 }
+
+

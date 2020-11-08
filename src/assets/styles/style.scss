@@ -141,6 +141,7 @@ a {
         font-weight: 500;
         font-size: 26px;
         color: #0D0D0D;
+
       }
     }
 
@@ -151,13 +152,31 @@ a {
     background-color: #000;
     background-size: cover;
     width: 100%;
+    color: white;
+
+    p {
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 33px;
+
+    }
+    h2 {
+      font-family: Lucida Console;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 46px;
+      line-height: 46px;
+      margin-bottom: 20px;
+    }
+
 
     &-container {
       margin-top: 50px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      margin-right: 100px;
 
       .creative {
         font-family: Lucida Console;
@@ -186,28 +205,15 @@ a {
 
         }
 
-        .desc {
+        .desc-right {
           color: #FFFFFF;
           width: 100%;
           margin-left: 40px;
-          text-align: left;
+          text-align: right;
+          margin-right: 100px;
 
-          h2 {
-            font-family: Lucida Console;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 46px;
-            line-height: 46px;
-          }
 
-          p {
-            font-family: Manrope;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 24px;
-            line-height: 33px;
 
-          }
         }
 
         .desc-left {
@@ -223,11 +229,12 @@ a {
 
     .creative-left {
       transform: none;
-      margin-right: 40px;
+
     }
 
     .desc-left {
-      margin-right: 40px
+      margin-right: 40px;
+      margin-left: 100px;
     }
   }
 
@@ -236,10 +243,9 @@ a {
 .next-page {
   color: #fff;
   width: 100%;
-  position: relative;
-  left: 85%;
   margin-top: 80px;
   padding-bottom: 50px;
+  margin-left: calc(100% - 94px);
 
   span {
     margin-left: 20px;
@@ -262,12 +268,11 @@ a {
   .next-page {
     margin: 0;
     padding: 0;
-    position: relative;
-    left: 0;
+
 
     span {
       position: absolute;
-      margin-left: 20px;
+
     }
   }
 
