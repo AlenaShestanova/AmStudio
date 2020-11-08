@@ -29,6 +29,8 @@
 }
 
 #root {
+  overflow-x: hidden;
+  height: 100%;
 }
 
 body {
@@ -83,16 +85,13 @@ a {
 }
 
 .mobile-menu {
-display: none;
-  border: 1px solid black;
-  padding: 20px;
+  display: none;
   z-index: 100;
   background-color: #fff;
   position: fixed;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  right: 0;
+  width: 100%;
   height: 100vh;
   animation-duration: 1000ms;
   overflow: hidden;
