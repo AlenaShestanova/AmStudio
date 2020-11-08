@@ -14,16 +14,24 @@ const Header = () => {
     {title: 'Контакты', link: '/contacts'},
 
   ]
+  const clickHandler=()=>{
+    setOpenMenu(!openMenu)
+    document.getElementById('root').classList.toggle('no-scrolling')
+
+  }
   const mobileMenu=(
-    <div className={ `mobile-menu ${openMenu&& 'mobile-menu-active'}`}>
-      {arr.map((item) =>
+    <div id='menu' className={`mobile-menu ${openMenu?'mobile-menu-open':'mobile-menu-close'}`}>
+      {arr.map((item) =>{
+        console.log(item)
+        return(
         <NavLink
           exact
           activeClassName="active"
           to={item.link}
+          onClick={clickHandler}
         >
           {item.title}
-        </NavLink>
+        </NavLink>)}
       )}
     </div>
   )
@@ -31,6 +39,7 @@ const Header = () => {
 const redirect = () => (history.push('/contacts'))
 
 return (
+  <>
   <ul className='navigation-wrapper'>
     <Link to='/'> <img src={logo} alt=""/></Link>
     {arr.map((item) =>
@@ -43,9 +52,10 @@ return (
       </NavLink>
     )}
     <li onClick={redirect} className='order'> Заказать</li>
-    <img className='burger-menu' src={burger} onClick={()=>setOpenMenu(!openMenu)} alt=""/>
-    {openMenu && mobileMenu}
+    <img className='burger-menu' src={burger} onClick={clickHandler} alt=""/>
   </ul>
+  {openMenu && mobileMenu}
+  </>
 )
 }
 export default Header

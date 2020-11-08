@@ -20,6 +20,7 @@
     .burger-menu {
       display: block;
       width: 44px;
+
     }
 
     .order {
@@ -28,7 +29,9 @@
       text-align: center;
     }
 
-
+  }
+  .mobile-menu{
+    display: flex;
   }
 }
 
@@ -687,4 +690,18 @@
   }
 }
 
-
+//MENU
+@media screen and (max-width:600px){
+  .mobile-menu {
+    a {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .mobile-menu {
+    a {
+      font-size: 14px;
+    }
+  }
+}
