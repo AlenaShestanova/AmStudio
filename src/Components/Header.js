@@ -41,7 +41,7 @@ const redirect = () => (history.push('/contacts'))
 return (
   <>
   <ul className='navigation-wrapper'>
-    <Link to='/'> <img src={logo} alt=""/></Link>
+    <Link className='logo' to='/'> <img src={logo} alt=""/></Link>
     {arr.map((item) =>
       <NavLink
         exact
